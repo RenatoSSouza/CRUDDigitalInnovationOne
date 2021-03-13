@@ -26,10 +26,11 @@ namespace GrudDIO.Class
         public override string ToString()
         {
             string turnBack = "";
-            turnBack += $"Genre {Genre + Environment.NewLine}";
-            turnBack += $"Title {Title + Environment.NewLine}";
-            turnBack += $"Description {Description + Environment.NewLine}";
-            turnBack += $"Year {Year + Environment.NewLine}";
+            turnBack += $"Genre: {Genre + Environment.NewLine}";
+            turnBack += $"Title: {Title + Environment.NewLine}";
+            turnBack += $"Description: {Description + Environment.NewLine}";
+            turnBack += $"Year: {Year + Environment.NewLine}";
+            turnBack += $"Excluded: {Excluded}";
             return turnBack;
         }
 
@@ -41,6 +42,11 @@ namespace GrudDIO.Class
         public int ReturnId()
         {
             return Id;
+        }
+
+        public bool ReturnExcluded()
+        {
+            return Excluded;
         }
 
         public void Excludes()
