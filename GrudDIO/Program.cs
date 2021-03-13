@@ -1,4 +1,5 @@
-﻿using System;
+﻿using GrudDIO.Class;
+using System;
 
 namespace GrudDIO
 {
@@ -6,7 +7,7 @@ namespace GrudDIO
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+           
         }
     }
 }
