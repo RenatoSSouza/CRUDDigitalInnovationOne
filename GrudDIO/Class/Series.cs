@@ -5,20 +5,22 @@ using System.Text;
 
 namespace GrudDIO.Class
 {
-    class Series: BaseEntity
+    class Series : BaseEntity
     {
         private Genre Genre { get; set; }
         private string Title { get; set; }
         private string Description { get; set; }
         private int Year { get; set; }
+        private bool Excluded { get; set; }
 
-        public Series(int id,Genre genre, string title, string description, int year)
+        public Series(int id, Genre genre, string title, string description, int year)
         {
             Id = id;
             Genre = genre;
             Title = title;
             Description = description;
             Year = year;
+            Excluded = false;
         }
 
         public override string ToString()
@@ -39,6 +41,11 @@ namespace GrudDIO.Class
         public int ReturnId()
         {
             return Id;
+        }
+
+        public void Excludes()
+        {
+            Excluded = true;
         }
     }
 }

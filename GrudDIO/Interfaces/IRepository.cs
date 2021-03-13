@@ -4,13 +4,13 @@ using System.Text;
 
 namespace GrudDIO.Interfaces
 {
-    public interface IRepository
+    public interface IRepository<T>
     {
-        List<T> list();
+        List<T> List();
         T ReturnById(int id);
-        void Insert(T entityes);
+        void Insert(T entity);
         void Exclude(int id);
-        void Update(int id, T entityes);
+        void Update(int id, T entity);
         int NextId();
     }
 }

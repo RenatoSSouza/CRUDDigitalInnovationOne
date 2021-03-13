@@ -7,35 +7,36 @@ namespace GrudDIO.Class
 {
     class RepositorySeries : IRepository<Series>
     {
-        private List<Series> SeriesList = new List<Series>();
+        private List<Series> seriesList = new List<Series>();
+
         public void Exclude(int id)
         {
-            throw new NotImplementedException();
+            seriesList[id].Excludes();
         }
 
-        public void Insert(Series entityes)
+        public void Insert(Series entity)
         {
-            throw new NotImplementedException();
+            seriesList.Add(entity);
         }
 
         public List<Series> List()
         {
-            throw new NotImplementedException();
+            return seriesList;
         }
 
         public int NextId()
         {
-            throw new NotImplementedException();
+            return seriesList.Count;
         }
 
         public Series ReturnById(int id)
         {
-            throw new NotImplementedException();
+            return seriesList[id];
         }
 
-        public void Update(int id, Series entityes)
+        public void Update(int id, Series entity)
         {
-            throw new NotImplementedException();
+            seriesList[id] = entity;
         }
     }
 }
